@@ -26,4 +26,4 @@ Hope it might be useful.
 
 Thank you.
 
-[justudin]: www.justudin.com
+[justudin](http://justudin.com)
