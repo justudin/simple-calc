@@ -1,4 +1,4 @@
-#Simple Calculator GUI written in Python
+Simple Calculator GUI written in Python
 
 This scripts was written by under python 3.5 and using Pycharm Community Edition.
 
