@@ -56,30 +56,50 @@ class Calc_GUI(QMainWindow):
     # func for add
     def add(self):
         sender = self.sender()
-        tot = float(self.input1.text())+float(self.input2.text())
-        self.statusBar().showMessage('Written by Udin: button '+sender.text() + ' was pressed')
-        self.res.setText(str(tot))
+        try:
+            val1=float(self.input1.text())
+            val2=float(self.input2.text())
+            tot =val1 + val2
+            self.statusBar().showMessage('Written by Udin: button '+sender.text() + ' was pressed')
+            self.res.setText(str(tot))
+        except ValueError:
+            self.res.setText('Invalid Input')
     # func for minus
     def minus(self):
         sender = self.sender()
-        tot = float(self.input1.text())-float(self.input2.text())
-        self.statusBar().showMessage('Written by Udin: button '+sender.text() + ' was pressed')
-        self.res.setText(str(tot))
+        try:
+            val1=float(self.input1.text())
+            val2=float(self.input2.text())
+            tot = val1 - val2
+            self.statusBar().showMessage('Written by Udin: button '+sender.text() + ' was pressed')
+            self.res.setText(str(tot))
+        except ValueError:
+            self.res.setText('Invalid Input')
     # func for multiply
     def mul(self):
         sender = self.sender()
-        tot = float(self.input1.text())*float(self.input2.text())
-        self.statusBar().showMessage('Written by Udin: button '+ sender.text() + ' was pressed')
-        self.res.setText(str(tot))
+        try:
+            val1=float(self.input1.text())
+            val2=float(self.input2.text())
+            tot = val1 * val2
+            self.statusBar().showMessage('Written by Udin: button '+ sender.text() + ' was pressed')
+            self.res.setText(str(tot))
+        except ValueError:
+            self.res.setText('Invalid Input')
     # func for division
     def div(self):
         sender = self.sender()
-        if (float(self.input2.text())==0):
-            self.res.setText('divide by 0')
-        else:
-            tot = float(self.input1.text())/float(self.input2.text())
-            self.statusBar().showMessage('Written by Udin: button '+sender.text() + ' was pressed')
-            self.res.setText(str(tot))
+        try:
+            val1=float(self.input1.text())
+            val2=float(self.input2.text())
+            if (val2 == 0):
+                self.res.setText('divide by 0')
+            else:
+                tot = val1 / val2
+                self.statusBar().showMessage('Written by Udin: button '+sender.text() + ' was pressed')
+                self.res.setText(str(tot))
+        except ValueError:
+            self.res.setText('Invalid Input')
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)
