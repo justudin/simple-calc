@@ -56,27 +56,30 @@ class Calc_GUI(QMainWindow):
     # func for add
     def add(self):
         sender = self.sender()
-        tot = int(self.input1.text())+int(self.input2.text())
+        tot = float(self.input1.text())+float(self.input2.text())
         self.statusBar().showMessage('Written by Udin: button '+sender.text() + ' was pressed')
         self.res.setText(str(tot))
     # func for minus
     def minus(self):
         sender = self.sender()
-        tot = int(self.input1.text())-int(self.input2.text())
+        tot = float(self.input1.text())-float(self.input2.text())
         self.statusBar().showMessage('Written by Udin: button '+sender.text() + ' was pressed')
         self.res.setText(str(tot))
     # func for multiply
     def mul(self):
         sender = self.sender()
-        tot = int(self.input1.text())*int(self.input2.text())
+        tot = float(self.input1.text())*float(self.input2.text())
         self.statusBar().showMessage('Written by Udin: button '+ sender.text() + ' was pressed')
         self.res.setText(str(tot))
     # func for division
     def div(self):
         sender = self.sender()
-        tot = int(self.input1.text())/int(self.input2.text())
-        self.statusBar().showMessage('Written by Udin: button '+sender.text() + ' was pressed')
-        self.res.setText(str(tot))
+        if (float(self.input2.text())==0):
+            self.res.setText('divide by 0')
+        else:
+            tot = float(self.input1.text())/float(self.input2.text())
+            self.statusBar().showMessage('Written by Udin: button '+sender.text() + ' was pressed')
+            self.res.setText(str(tot))
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)
