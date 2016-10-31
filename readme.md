@@ -15,7 +15,7 @@ or run it by using PyCharm IDE.
 
 Screenshot
 -----------
-![gui.JPG](gui.JPG)
+![gui.jpg](gui.JPG)
 
 License
 --------
@@ -23,5 +23,4 @@ Free and Open Source, Feel free to use and modified it.
 
 Contact
 -------
-You can contact me via:
-[justudin](http://justudin.com)
+You can contact me via [justudin](http://justudin.com)
