@@ -9,7 +9,7 @@ How to use?
 -----------
 Using command line:
 
-​		`python SimpleCalc_GUI.py`
+​		`python3 SimpleCalc_GUI.py`
 
 or run it by using PyCharm IDE.
 
