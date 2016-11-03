@@ -21,7 +21,7 @@ or run it by using PyCharm IDE.
 
 Screenshot
 -----------
-![gui.jpg](gui.JPG)
+![gui.jpg](master/gui.JPG)
 
 License
 --------
