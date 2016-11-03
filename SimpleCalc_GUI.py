@@ -24,12 +24,15 @@ class Calc_GUI(QMainWindow):
         lblres.move(15, 200)
         # TextEdit for input1
         self.input1 = QLineEdit(self)
+        self.input1.setFixedWidth(150)
         self.input1.move(100, 10)
         # TextEdit for input2
         self.input2 = QLineEdit(self)
+        self.input2.setFixedWidth(150)
         self.input2.move(100, 50)
         # TextEdit for Result
         self.res = QLineEdit(self)
+        self.res.setFixedWidth(150)
         self.res.move(100, 200)
         # Button for +
         btnplus = QPushButton("+", self)
