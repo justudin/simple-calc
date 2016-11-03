@@ -21,7 +21,7 @@ or run it by using PyCharm IDE.
 
 Screenshot
 -----------
-![gui.jpg](master/gui.JPG)
+![gui.jpg](https://github.com/justudin/simple-calc/blob/master/gui.JPG)
 
 License
 --------
