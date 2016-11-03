@@ -63,6 +63,8 @@ class Calc_GUI(QMainWindow):
             val1=float(self.input1.text())
             val2=float(self.input2.text())
             tot =val1 + val2
+            if( tot == int(tot) ):
+                tot = int(tot)
             self.statusBar().showMessage('Written by Udin: button '+sender.text() + ' was pressed')
             self.res.setText(str(self.makeAsItIs(tot)))
         except ValueError:
@@ -74,6 +76,8 @@ class Calc_GUI(QMainWindow):
             val1=float(self.input1.text())
             val2=float(self.input2.text())
             tot = val1 - val2
+            if( tot == int(tot) ):
+                tot = int(tot)
             self.statusBar().showMessage('Written by Udin: button '+sender.text() + ' was pressed')
             self.res.setText(str(self.makeAsItIs(tot)))
         except ValueError:
@@ -85,6 +89,8 @@ class Calc_GUI(QMainWindow):
             val1=float(self.input1.text())
             val2=float(self.input2.text())
             tot = val1 * val2
+            if( tot == int(tot) ):
+                tot = int(tot)
             self.statusBar().showMessage('Written by Udin: button '+ sender.text() + ' was pressed')
             self.res.setText(str(self.makeAsItIs(tot)))
         except ValueError:
@@ -99,6 +105,8 @@ class Calc_GUI(QMainWindow):
                 self.res.setText('divide by 0')
             else:
                 tot = val1 / val2
+                if( tot == int(tot) ):
+                tot = int(tot)
                 self.statusBar().showMessage('Written by Udin: button '+sender.text() + ' was pressed')
                 self.res.setText(str(self.makeAsItIs(tot)))
         except ValueError:
