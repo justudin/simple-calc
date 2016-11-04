@@ -1,10 +1,19 @@
 language: python
+sudo: true
 python:
   - "3.5"
+
+before_script:
+  - "export DISPLAY=:99.0"
+  - "sh -e /etc/init.d/xvfb start"
+  - sleep 3
+
 install:
-    - pip3 install PyQt5
-# command to install dependencies
-script: python3 SimpleCalc_GUI.py
+  - pip3 install PyQt5
+  - sudo apt-get install -qq libegl1-mesa
+
+script:
+  - python3 SimpleCalc_GUI.py
 branches:
   only:
     - master
