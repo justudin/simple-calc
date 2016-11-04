@@ -1,4 +1,4 @@
-Simple Calculator GUI
+Simple Calculator GUI [![Build Status](https://travis-ci.org/justudin/simple-calc.svg?branch=master)](https://travis-ci.org/justudin/simple-calc)
 =========================
 
 This scripts was written under **Python 3.5** and using **Pycharm Community Edition**.
