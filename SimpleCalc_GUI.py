@@ -64,7 +64,7 @@ class Calc_GUI(QMainWindow):
             val2=float(self.input2.text())
             tot =val1 + val2
             self.statusBar().showMessage('Written by Udin: button '+sender.text() + ' was pressed')
-            self.res.setText(str(tot))
+            self.res.setText(str(self.makeAsItIs(tot)))
         except ValueError:
             self.res.setText('Invalid Input')
     # func for minus
@@ -75,7 +75,7 @@ class Calc_GUI(QMainWindow):
             val2=float(self.input2.text())
             tot = val1 - val2
             self.statusBar().showMessage('Written by Udin: button '+sender.text() + ' was pressed')
-            self.res.setText(str(tot))
+            self.res.setText(str(self.makeAsItIs(tot)))
         except ValueError:
             self.res.setText('Invalid Input')
     # func for multiply
@@ -86,7 +86,7 @@ class Calc_GUI(QMainWindow):
             val2=float(self.input2.text())
             tot = val1 * val2
             self.statusBar().showMessage('Written by Udin: button '+ sender.text() + ' was pressed')
-            self.res.setText(str(tot))
+            self.res.setText(str(self.makeAsItIs(tot)))
         except ValueError:
             self.res.setText('Invalid Input')
     # func for division
@@ -100,10 +100,14 @@ class Calc_GUI(QMainWindow):
             else:
                 tot = val1 / val2
                 self.statusBar().showMessage('Written by Udin: button '+sender.text() + ' was pressed')
-                self.res.setText(str(tot))
+                self.res.setText(str(self.makeAsItIs(tot)))
         except ValueError:
             self.res.setText('Invalid Input')
 
+    def makeAsItIs(self, value):
+        if (value == int(value)):
+            value = int(value)
+        return value
 if __name__ == '__main__':
     app = QApplication(sys.argv)
     ex = Calc_GUI()
