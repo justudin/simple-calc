@@ -51,6 +51,7 @@ class Calc_GUI(QMainWindow):
         btnminus.clicked.connect(self.minus)
         btnmul.clicked.connect(self.mul)
         btndiv.clicked.connect(self.div)
+        btndiv. Clicked.connect(self.square)
         #statusBar
         self.statusBar().showMessage('Written by Udin')
         self.setGeometry(500, 500, 270, 270)
@@ -67,6 +68,17 @@ class Calc_GUI(QMainWindow):
             self.res.setText(str(self.makeAsItIs(tot)))
         except ValueError:
             self.res.setText('Invalid Input')
+    def square(self):
+        sender = self.sender()
+        try:
+            val1=float(self.input1.text())
+            val2=float(self.input2.text())
+            tot =val1 **2+ val2**2
+            self.statusBar().showMessage('Written by Udin: button '+sender.text() + ' was pressed')
+            self.res.setText(str(self.makeAsItIs(tot)))
+        except ValueError:
+            self.res.setText('Invalid Input')
+    
     # func for minus
     def minus(self):
         sender = self.sender()
