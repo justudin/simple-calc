@@ -51,7 +51,6 @@ class Calc_GUI(QMainWindow):
         btnminus.clicked.connect(self.minus)
         btnmul.clicked.connect(self.mul)
         btndiv.clicked.connect(self.div)
-        btndiv. Clicked.connect(self.square)
         #statusBar
         self.statusBar().showMessage('Written by Udin')
         self.setGeometry(500, 500, 270, 270)
